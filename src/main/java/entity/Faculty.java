@@ -15,7 +15,7 @@ public class Faculty extends AbstractEntityName {
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    @OneToMany(mappedBy = "faculty", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "faculty", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     Set<Room> rooms;
 
     @ManyToMany(fetch = FetchType.EAGER)
