@@ -20,6 +20,8 @@ public class Zadanie01 {
 
         transaction.commit();
 
+        session.close();
+
         HibernateUtils.close();
 
         System.out.println(resultList);
