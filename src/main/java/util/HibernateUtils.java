@@ -35,7 +35,7 @@ public class HibernateUtils {
         StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
 
         Map<String, String> properties = new HashMap();
-        properties.put(Environment.URL, "jdbc:mysql://localhost:3306/university?useUnicode=yes&characterEncoding=utf8");
+        properties.put(Environment.URL, "jdbc:mysql://localhost:3306/createhibernate?useUnicode=yes&characterEncoding=utf8");
         properties.put(Environment.USER, "sda");
         properties.put(Environment.PASS, "pass");
         properties.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
@@ -43,6 +43,7 @@ public class HibernateUtils {
         properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
         properties.put(Environment.SHOW_SQL, "true");
         properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
+        properties.put(Environment.HBM2DDL_AUTO, "create");
 
         registryBuilder.applySettings(properties);
 
