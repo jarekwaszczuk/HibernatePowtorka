@@ -1,12 +1,9 @@
 package entity;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -23,5 +20,10 @@ public class Faculty {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    @OneToMany(mappedBy = "faculty", fetch = FetchType.EAGER)
+    Set<Room> rooms;
 
 }
