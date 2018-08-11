@@ -9,16 +9,17 @@ import java.util.List;
 public class Zadanie01 {
     public static void main(String[] args) {
 
-
         Session session = HibernateUtils.getSession();
 
         Transaction transaction = session.beginTransaction();
 
-        Query<Faculty> query = session.createQuery("select f from Faculty f", Faculty.class);
+        Query query = session.createQuery("select f from Faculty f", Faculty.class);
 
         List<Faculty> resultList = query.getResultList();
 
         transaction.commit();
+
+        session.close();
 
         HibernateUtils.close();
 
