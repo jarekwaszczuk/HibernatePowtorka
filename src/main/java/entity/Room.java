@@ -1,11 +1,15 @@
 package entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
 @Entity
+@ToString
 public class Room {
 
     @Id
@@ -15,5 +19,5 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name = "faculty_id")
-    Faculty facultyId;
+    Faculty faculty;
 }
