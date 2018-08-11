@@ -12,10 +12,11 @@ import java.util.Set;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-public class Course extends AbstractEntityName{
+public class Semester extends AbstractEntityName {
+
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    @OneToMany(mappedBy = "course", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "semester", fetch = FetchType.EAGER)
     Set<Group> groups;
 }
