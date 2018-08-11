@@ -10,9 +10,8 @@ import java.util.Set;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-public class Faculty extends AbstractEntity {
+public class Faculty extends AbstractEntityName {
 
-    private String name;
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude

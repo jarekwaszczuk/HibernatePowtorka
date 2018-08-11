@@ -28,7 +28,7 @@ public class Zadanie06 {
 
         for(int i=0;i < resultList.size();i++){
             System.out.println(resultList.get(i).getCourses());
-            System.out.println("Ile kursów: " + resultList.get(i).getCourses().size() + " (" + resultList.get(i).getName() + ")");
+            System.out.println("Ile: " + resultList.get(i).getCourses().size() + " (" + resultList.get(i) + ")");
         }
     }
 }

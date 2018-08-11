@@ -34,10 +34,10 @@ public class Zadanie08 {
 //        resultList.forEach(System.out::println);
 
         for (int i = 0; i < resultList.size(); i++) {
+            System.out.println("(" + resultList.get(i) + ")");
             System.out.println(resultList.get(i).getCourses());
             System.out.println(resultList.get(i).getRooms());
             System.out.println(resultList.get(i).getLecturers());
-            System.out.println("Ile kursów: " + resultList.get(i).getCourses().size() + " (" + resultList.get(i).getName() + ")");
         }
     }
 }

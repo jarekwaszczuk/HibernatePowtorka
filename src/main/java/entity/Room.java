@@ -9,9 +9,7 @@ import javax.persistence.*;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-public class Room extends AbstractEntity{
-
-    private String name;
+public class Room extends AbstractEntityName{
 
     @ManyToOne
     @EqualsAndHashCode.Exclude

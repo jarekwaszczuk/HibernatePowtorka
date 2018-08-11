@@ -30,7 +30,7 @@ public class Zadanie05 {
 
         for(int i=0;i < resultList.size();i++){
             System.out.println(resultList.get(i).getRooms());
-            System.out.println("Ile pokoi: " + resultList.get(i).getRooms().size() + " (" + resultList.get(i).getName() + ")");
+            System.out.println("Ile: " + resultList.get(i).getRooms().size() + " (" + resultList.get(i) + ")");
 
         }
     }

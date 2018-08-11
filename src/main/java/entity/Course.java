@@ -12,7 +12,6 @@ import javax.persistence.Entity;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-public class Course extends AbstractEntity{
+public class Course extends AbstractEntityName{
 
-    String name;
 }

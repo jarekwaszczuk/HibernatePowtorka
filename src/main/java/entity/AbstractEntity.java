@@ -28,4 +28,12 @@ public class AbstractEntity {
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        if(id == null){
+            return super.hashCode();
+        }
+        return id.intValue();
+    }
 }
