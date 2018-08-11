@@ -1,5 +1,6 @@
 package entity;
 
+import com.sun.deploy.security.ValidationState;
 import lombok.*;
 
 import javax.persistence.*;
@@ -7,7 +8,6 @@ import java.util.Set;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @NoArgsConstructor
 @Entity
 public class Faculty extends AbstractEntityName {
@@ -15,7 +15,7 @@ public class Faculty extends AbstractEntityName {
 
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
-    @OneToMany(mappedBy = "faculty", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "faculty", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     Set<Room> rooms;
 
     @ManyToMany(fetch = FetchType.EAGER)
