@@ -18,6 +18,8 @@ public class Room {
     private String name;
 
     @ManyToOne
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     @JoinColumn(name = "faculty_id")
     private Faculty faculty;
 }
