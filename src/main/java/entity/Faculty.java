@@ -1,9 +1,6 @@
 package entity;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -16,6 +13,7 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
+@ToString
 public class Faculty {
 
     @Id
