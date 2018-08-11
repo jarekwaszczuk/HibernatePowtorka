@@ -1,14 +1,12 @@
 import entity.Faculty;
-import entity.Room;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import util.HibernateUtils;
 
-import java.util.Arrays;
 import java.util.List;
 
-public class Zadanie05 {
+public class Zadanie06 {
     public static void main(String[] args) {
 
         Session session = HibernateUtils.getSession();
@@ -29,9 +27,8 @@ public class Zadanie05 {
         System.out.println("Rekordów: " + resultList.size());
 
         for(int i=0;i < resultList.size();i++){
-            System.out.println(resultList.get(i).getRooms());
-            System.out.println("Ile pokoi: " + resultList.get(i).getRooms().size() + " (" + resultList.get(i).getName() + ")");
-
+            System.out.println(resultList.get(i).getCourses());
+            System.out.println("Ile kursów: " + resultList.get(i).getCourses().size() + " (" + resultList.get(i).getName() + ")");
         }
     }
 }

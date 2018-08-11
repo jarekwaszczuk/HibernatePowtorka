@@ -26,4 +26,12 @@ public class Faculty {
     @OneToMany(mappedBy = "faculty", fetch = FetchType.EAGER)
     Set<Room> rooms;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "faculty_course",
+            joinColumns = {@JoinColumn(name = "faculty_id")},
+            inverseJoinColumns = {@JoinColumn(name = "course_id")}
+    )
+    private Set<Course> courses;
+
 }
