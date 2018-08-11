@@ -2,6 +2,7 @@ package util;
 
 import entity.Course;
 import entity.Faculty;
+import entity.Lecturer;
 import entity.Room;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -54,6 +55,7 @@ public class HibernateUtils {
                 .addAnnotatedClass(Faculty.class)
                 .addAnnotatedClass(Room.class)
                 .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Lecturer.class)
 
                 .buildMetadata();
 

@@ -34,4 +34,11 @@ public class Faculty {
     )
     private Set<Course> courses;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "faculty_lecturer",
+            joinColumns = {@JoinColumn(name = "faculty_id")},
+            inverseJoinColumns = {@JoinColumn(name = "lecturer_id")}
+    )
+    private Set<Lecturer> lecturers;
 }
