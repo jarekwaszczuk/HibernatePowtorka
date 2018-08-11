@@ -17,8 +17,10 @@ import javax.persistence.Id;
 public class Faculty {
 
     @Id
-    @GenericGenerator(name = "gen", strategy = "increment")
-    @GeneratedValue(generator = "gen", strategy = GenerationType.IDENTITY)
+//    @GenericGenerator(name = "gen", strategy = "increment")
+//    @GeneratedValue(generator = "gen", strategy = GenerationType.IDENTITY)
+//    do używania w innych bazach, w MySQL wystarczy poniżej
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String name;
 
