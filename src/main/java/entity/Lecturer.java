@@ -9,12 +9,8 @@ import javax.persistence.*;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-@ToString
-public class Lecturer {
+public class Lecturer extends AbstractEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     private String name;
     private String surname;
     @Enumerated(EnumType.STRING)

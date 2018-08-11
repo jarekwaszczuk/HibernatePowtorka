@@ -10,15 +10,8 @@ import java.util.Set;
 @EqualsAndHashCode
 @NoArgsConstructor
 @Entity
-@ToString
-public class Faculty {
+public class Faculty extends AbstractEntity {
 
-    @Id
-//    @GenericGenerator(name = "gen", strategy = "increment")
-//    @GeneratedValue(generator = "gen", strategy = GenerationType.IDENTITY)
-//    do używania w innych bazach, w MySQL wystarczy poniżej
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     private String name;
 
     @EqualsAndHashCode.Exclude
