@@ -25,5 +25,6 @@ public class Zadanie02 {
         HibernateUtils.close();
 
         System.out.println(resultList);
+        System.out.println("Rekordów: " + resultList.size());
     }
 }

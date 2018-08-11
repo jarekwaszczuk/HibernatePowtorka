@@ -1,4 +1,4 @@
-import entity.Faculty;
+import entity.Room;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -6,16 +6,16 @@ import util.HibernateUtils;
 
 import java.util.List;
 
-public class Zadanie01 {
+public class Zadanie03 {
     public static void main(String[] args) {
 
         Session session = HibernateUtils.getSession();
 
         Transaction transaction = session.beginTransaction();
 
-        Query query = session.createQuery("select f from Faculty f", Faculty.class);
+        Query<Room> query = session.createQuery("select r from Room r", Room.class);
 
-        List<Faculty> resultList = query.getResultList();
+        List<Room> resultList = query.getResultList();
 
         transaction.commit();
 
@@ -25,5 +25,6 @@ public class Zadanie01 {
 
         System.out.println(resultList);
         System.out.println("Rekordów: " + resultList.size());
+
     }
 }

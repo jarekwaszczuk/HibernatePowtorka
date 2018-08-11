@@ -1,6 +1,7 @@
 package util;
 
 import entity.Faculty;
+import entity.Room;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -50,6 +51,7 @@ public class HibernateUtils {
 
         Metadata metadata = new MetadataSources(serviceRegistry)
                 .addAnnotatedClass(Faculty.class)
+                .addAnnotatedClass(Room.class)
 
                 .buildMetadata();
 
