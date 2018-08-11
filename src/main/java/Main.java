@@ -1,4 +1,3 @@
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import util.HibernateUtils;
 
