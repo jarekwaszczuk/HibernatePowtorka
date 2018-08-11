@@ -21,7 +21,7 @@ public class Faculty {
 //    @GeneratedValue(generator = "gen", strategy = GenerationType.IDENTITY)
 //    do używania w innych bazach, w MySQL wystarczy poniżej
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    String name;
+    private Integer id;
+    private String name;
 
 }

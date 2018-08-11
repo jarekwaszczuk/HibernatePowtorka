@@ -14,8 +14,8 @@ public class Zadanie04 {
 
         Transaction transaction = session.beginTransaction();
 
-        Query<Room> query = session.createQuery("select r from Room r where r.faculty.name = :faculty", Room.class);
-        query.setParameter("faculty", "Wydział Humanistyczny");
+        Query<Room> query = session.createQuery("select r from Room r where r.faculty.name = :facultyName", Room.class);
+        query.setParameter("facultyName", "Wydział Humanistyczny");
 
         List<Room> resultList = query.getResultList();
 

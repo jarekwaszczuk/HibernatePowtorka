@@ -14,10 +14,10 @@ public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    String name;
+    private Integer id;
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "faculty_id")
-    Faculty faculty;
+    private Faculty faculty;
 }
