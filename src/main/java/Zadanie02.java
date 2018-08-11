@@ -13,8 +13,8 @@ public class Zadanie02 {
 
         Transaction transaction = session.beginTransaction();
 
-        Query query = session.createQuery("select f from Faculty f where f.name like :myname", Faculty.class);
-        query.setParameter("myname", "%Human%");
+        Query<Faculty> query = session.createQuery("select f from Faculty f where f.name = :myname", Faculty.class);
+        query.setParameter("myname", "Wydział Humanistyczny");
 
         List<Faculty> resultList = query.getResultList();
 

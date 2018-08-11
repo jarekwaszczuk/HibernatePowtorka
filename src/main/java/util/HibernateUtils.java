@@ -35,7 +35,7 @@ public class HibernateUtils {
         StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
 
         Map<String, String> properties = new HashMap();
-        properties.put(Environment.URL, "jdbc:mysql://localhost:3306/university");
+        properties.put(Environment.URL, "jdbc:mysql://localhost:3306/university?useUnicode=yes&characterEncoding=utf8");
         properties.put(Environment.USER, "sda");
         properties.put(Environment.PASS, "pass");
         properties.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
